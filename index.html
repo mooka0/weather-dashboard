@@ -4,59 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/80833262c1.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
     <title>Weather App</title>
 </head>
 
 <body>
-    <div class="row">
-        <div class=" col-9">
-            <div class="header">
-                <header>
-                    <h1>Weather Dashboard</h1>
-                </header>
-            </div>
-        </div>
+<!-- header -->
 
-        <div class="col-md-3">
-            <div class="search">
-                <div class="row">
-                    <h2>Search for a City:</h2>
-                </div>
-                <div class="row"></div>
-                <input type="text" class="input" placeholder="Los Angeles">
-                <button type="submit" class="button">
-                    <span class="oi oi-magnifying-glass"></span></button>
-            </div>
-        </div>
+        <header class="header">
+            <h1>Weather Dashboard</h1>
+        </header>
 
-        <div class="col-6 weather-info>
-            <div class="row">
-            <p>Temperature:</p>
-            <p>Humidity:</p>
-            <p>Wind Speed:</p>
-            <p>UV Index:</p>
+
+<!-- Search for City -->
+<div class="container">
+    <div class="search">
+        <div class="row">
+            <h1>Search for a City:</h1>
         </div>
+        <div class="row">
+            <input type="text" class="searchInput" placeholder="Search A City">
+            <button type="submit" class="searchBtn">
+            <i class="fas fa-search"></i>
+            </button>
+        </div>
+<!-- History of Cities Searched -->
+        <div class="historyItems"></div>
     </div>
+    <div class="col-two-container">
+        <div class="forecast">
+            <div class="row">
+                <h1 class="cityName">City Name</h1>
+                <h1 class="currentDate"></h1>
+                <img class="weatherIcon"></img>
+            </div>
+            <div class="row">
+                <p class="temp">Temperature:</p>
+            </div>
+            <div class="row">
+                <p class="humidity">Humidity:</p>
+            </div>
+            <div class="row">
+                <p class="windSpeed">Wind Speed:</p>
+            </div>
+            <div class="row">
+                <p class="uvIndex">UV Index:</p>
+            </div>
+        </div>
+
+        <div class="five-day-container">
+            <h1>5-Day Forecast:</h1>
+            <div class="card-row">
+            </div>
+        </div>
     </div>
 </div>
-    </div>
 
-
-    <div class="col-3">
-        <h2>5-Day Forecast:</h2>
-        <div class="card-row">
-
-        </div>
-    </div>
-
-
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="assets/script.js"></script>
+<!-- Jquery -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- Code to script file -->
+<script src="assets/script.js"></script>
 </body>
 
 </html>
